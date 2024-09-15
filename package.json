@@ -2,12 +2,15 @@
   "name": "hono-api-template",
   "scripts": {
     "dev": "wrangler dev src/index.ts",
-    "deploy": "wrangler deploy --minify src/index.ts"
+    "deploy": "wrangler deploy --minify src/index.ts",
+    "lint": "biome lint src/",
+    "format": "biome format src/"
   },
   "dependencies": {
     "hono": "^4.6.1"
   },
   "devDependencies": {
+    "@biomejs/biome": "1.9.1",
     "@cloudflare/workers-types": "^4.20240529.0",
     "wrangler": "^3.57.2"
   }
